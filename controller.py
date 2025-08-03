@@ -21,9 +21,14 @@ class CalculatorController:
 
     def divMap(self):
         self.view.input_text.insert("end-1c","/")
-
+    '''
     def equalMap(self):
         answer = self.model.equal(self.view.input_text.get("1.0",'end-1c'))
+        self.view.input_text.delete(1.0,"end-1c")
+        self.view.input_text.insert("end-1c",str(answer))
+    '''
+    def equalMap(self):
+        answer = self.model.shunting_yard_algorithm(self.view.input_text.get("1.0",'end-1c'))
         self.view.input_text.delete(1.0,"end-1c")
         self.view.input_text.insert("end-1c",str(answer))
 

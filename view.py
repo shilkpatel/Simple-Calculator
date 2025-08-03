@@ -6,55 +6,55 @@ class CalculatorView:
         root.title("Calculator")
 
         
-        self.input_text= tk.Text(root,height=1,width=6)
-        self.input_text.grid(row=0,column=0,columnspan=3)
+        self.input_text= tk.Text(root,height=5,width=25)
+        self.input_text.grid(row=0,column=0,columnspan=4)
 
-        self.button0 = tk.Button(root,text="0")
+        self.button0 = tk.Button(root,text="0",height=5,width=5)
         self.button0.grid(column=1,row=4)
 
-        self.button1 = tk.Button(root,text="1")
+        self.button1 = tk.Button(root,text="1",height=5,width=5)
         self.button1.grid(column=0,row=1)
 
-        self.button2 = tk.Button(root,text="2")
+        self.button2 = tk.Button(root,text="2",height=5,width=5)
         self.button2.grid(column=1,row=1)
 
-        self.button3 = tk.Button(root,text="3")
+        self.button3 = tk.Button(root,text="3",height=5,width=5)
         self.button3.grid(column=2,row=1)
 
-        self.button4 = tk.Button(root,text="4")
+        self.button4 = tk.Button(root,text="4",height=5,width=5)
         self.button4.grid(column=0,row=2)
 
-        self.button5 = tk.Button(root,text="5")
+        self.button5 = tk.Button(root,text="5",height=5,width=5)
         self.button5.grid(column=1,row=2)
 
-        self.button6 = tk.Button(root,text="6")
+        self.button6 = tk.Button(root,text="6",height=5,width=5)
         self.button6.grid(column=2,row=2)
 
-        self.button7 = tk.Button(root,text="7")
+        self.button7 = tk.Button(root,text="7",height=5,width=5)
         self.button7.grid(column=0,row=3)
 
-        self.button8 = tk.Button(root,text="8")
+        self.button8 = tk.Button(root,text="8",height=5,width=5)
         self.button8.grid(column=1,row=3)
 
-        self.button9 = tk.Button(root,text="9")
+        self.button9 = tk.Button(root,text="9",height=5,width=5)
         self.button9.grid(column=2,row=3)
 
-        self.mult = tk.Button(root,text="x")
+        self.mult = tk.Button(root,text="x",height=5,width=5)
         self.mult.grid(column=3,row=1)
 
-        self.add = tk.Button(root,text="+")
+        self.add = tk.Button(root,text="+",height=5,width=5)
         self.add.grid(column=3,row=2)
 
-        self.div = tk.Button(root,text="/")
+        self.div = tk.Button(root,text="/",height=5,width=5)
         self.div.grid(column=3,row=3)
 
-        self.sub = tk.Button(root,text="-")
+        self.sub = tk.Button(root,text="-",height=5,width=5)
         self.sub.grid(column=3,row=4)
 
-        self.equal = tk.Button(root,text="=")
+        self.equal = tk.Button(root,text="=",height=5,width=5)
         self.equal.grid(column=0,row=4)
 
-        self.back = tk.Button(root,text="<-")
+        self.back = tk.Button(root,text="<-",height=5,width=5)
         self.back.grid(column=2,row=4)
 
         self.controller= None
