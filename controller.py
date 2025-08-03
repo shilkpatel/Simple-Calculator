@@ -8,18 +8,28 @@ class CalculatorController:
 
 
     def NumMap(self,num):
-        print(num)
-        res = self.model.number(num)
-        print(self.model.value)
-        print(self.model.value2)
-        
-        self.view.input_text.insert("end-1c",res)
+        self.view.input_text.insert("end-1c",num)
 
     def multMap(self):
-        self.model.mult()
-        self.view.input_text.delete(1.0,"end-1c")
+        self.view.input_text.insert("end-1c","*")
+
+    def addMap(self):
+        self.view.input_text.insert("end-1c","+")
+
+    def subMap(self):
+        self.view.input_text.insert("end-1c","-")
+
+    def divMap(self):
+        self.view.input_text.insert("end-1c","/")
 
     def equalMap(self):
-        answer = self.model.equal()
+        answer = self.model.equal(self.view.input_text.get("1.0",'end-1c'))
         self.view.input_text.delete(1.0,"end-1c")
         self.view.input_text.insert("end-1c",str(answer))
+
+    def back(self):
+        current = self.view.input_text.get("1.0",'end-1c')
+        if current=="":
+            return
+        self.view.input_text.delete(1.0,"end-1c")
+        self.view.input_text.insert("end-1c",current[:-1])

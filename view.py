@@ -52,7 +52,10 @@ class CalculatorView:
         self.sub.grid(column=3,row=4)
 
         self.equal = tk.Button(root,text="=")
-        self.equal.grid(column=4,row=4)
+        self.equal.grid(column=0,row=4)
+
+        self.back = tk.Button(root,text="<-")
+        self.back.grid(column=2,row=4)
 
         self.controller= None
 
@@ -63,6 +66,9 @@ class CalculatorView:
 
 
         self.mult.config(command=self.controller.multMap)
+        self.add.config(command=self.controller.addMap)
+        self.sub.config(command=self.controller.subMap)
+        self.div.config(command=self.controller.divMap)
 
         self.button0.config(command=lambda:self.controller.NumMap(0))
         self.button1.config(command=lambda:self.controller.NumMap(1))
@@ -76,3 +82,4 @@ class CalculatorView:
         self.button9.config(command=lambda:self.controller.NumMap(9))
 
         self.equal.config(command=self.controller.equalMap)
+        self.back.config(command=self.controller.back)
