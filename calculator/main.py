@@ -1,7 +1,7 @@
 import tkinter
-from view import CalculatorView
-from model import CalculatorModel
-from controller import CalculatorController
+from calculator.view import CalculatorView
+from calculator.model import CalculatorModel
+from calculator.controller import CalculatorController
 
 root = tkinter.Tk()
 root.geometry('300x500')

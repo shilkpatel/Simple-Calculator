@@ -57,8 +57,6 @@ class CalculatorModel:
         stack = []
 
         while len(rpn)>0:
-            print(stack)
-            print(rpn)
             token = rpn.pop(0)
 
             if token.isnumeric():

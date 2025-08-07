@@ -29,6 +29,8 @@ class CalculatorController:
     '''
     def equalMap(self):
         answer = self.model.shunting_yard_algorithm(self.view.input_text.get("1.0",'end-1c'))
+        
+        # Input santization here
         self.view.input_text.delete(1.0,"end-1c")
         self.view.input_text.insert("end-1c",str(answer))
 
