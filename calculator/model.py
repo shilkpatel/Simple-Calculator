@@ -31,6 +31,9 @@ class CalculatorModel:
         equation = list(equation)
         tokens =[equation[0]]
         equation.pop(0)
+
+        # This code merges multi number numbers eg 10 would be seen as ["1","0"]
+        # This would connect them
         for i in equation:
             if i.isnumeric() and tokens[-1].isnumeric():
                 tokens[-1]+=i
@@ -42,7 +45,11 @@ class CalculatorModel:
         for i in tokens:
             if i.isnumeric():
                 queue.append(i)
-            elif i in ["*","-","+","/"]:
+            elif i == ")":
+                while stack[-1]!="(":
+                    queue.append(stack.pop())
+                stack.pop()
+            elif i in ["*","-","+","/","("]:
                 stack.append(i)
 
         for i in range(len(stack)):
